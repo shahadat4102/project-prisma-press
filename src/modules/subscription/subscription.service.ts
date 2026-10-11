@@ -1,5 +1,3 @@
-import { subscription } from './../../../generated/prisma/client';
-import { Payload } from './../../../generated/prisma/internal/prismaNamespace';
 import config from "../../config";
 import { prisma } from "../../lib/prisma"
 import { stripe } from "../../lib/stripe";
@@ -10,7 +8,7 @@ import { handelChakoutSessionCompleted, handelChangeSubscription } from './subsc
 
 const createCheckoutSession = async(userId : string) =>{
 
-const triansactionResult = await prisma.$transaction(async(tx)=>{
+const triansactionResult = await prisma.$transaction(async(tx: typeof prisma)=>{
   const user = await tx.user.findUniqueOrThrow({
     where:{
         id: userId

@@ -1,4 +1,3 @@
-import { Payload } from './../../../generated/prisma/internal/prismaNamespace';
 import config from "../../config";
 import { prisma } from "../../lib/prisma"
 import bcrypt from "bcryptjs";

@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 import { stripe } from "../../lib/stripe";
 import { prisma } from "../../lib/prisma";
-import { subscriptionStatus } from "../../../generated/prisma/client";
+import { subscriptionStatus } from "../../../generated/prisma/enums";
 
 
 

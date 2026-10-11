@@ -1,5 +1,4 @@
 import { PostStatus } from "../../../generated/prisma/enums";
-import { PostWhereInput } from "../../../generated/prisma/models";
 
 
 
@@ -24,13 +23,16 @@ export interface IupdatePostpalyload {
 }
 
 
-export interface IPostQuery extends PostWhereInput  {
-    // title?: string,
-    // content?: string
-
-    searchTerm?: string
-    page?: string
-    limit?: string
-    SortOrder?: string
-    sortBy?: string
+export interface IPostQuery {
+    searchTerm?: string;
+    page?: string;
+    limit?: string;
+    SortOrder?: string;
+    sortBy?: string;
+    title?: string;
+    content?: string;
+    authorId?: string;
+    isFeatured?: boolean;
+    tags?: string;
+    status?: PostStatus;
 }

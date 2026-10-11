@@ -1,12 +1,8 @@
-import { Payload } from './../../../generated/prisma/internal/prismaNamespace';
-
-import {  NextFunction, Request,  Response } from "express"
+import { NextFunction, Request, Response } from "express"
 import httpStatus from "http-status";
 import { UserSirvice } from './user.service';
 import { catchAsync } from '../../utlis/catchasync';
 import { sendRespones } from '../../utlis/sendResposes';
-import { jwtUitile } from "../../utlis/jwt";
-import config from "../../config";
 
 
 
